@@ -1,0 +1,294 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ultra-Enhanced Recharge Plans</title>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #667eea, #764ba2, #6a11cb);
+            color: #fff;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            animation: gradient 6s infinite alternate;
+        }
+        @keyframes gradient {
+            0% { background: linear-gradient(135deg, #667eea, #764ba2, #6a11cb); }
+            100% { background: linear-gradient(135deg, #6a11cb, #764ba2, #667eea); }
+        }
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            background: rgba(0, 0, 0, 0.8);
+            color: #f9f9f9;
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5);
+            backdrop-filter: blur(10px);
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .header h1 {
+            font-size: 3.5em;
+            margin: 0;
+            color: #38bdf8;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+        .header p {
+            color: #cbd5e0;
+            font-size: 1.4em;
+        }
+        .plans {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+        .plan-card {
+            background: linear-gradient(135deg, #4e54c8, #8f94fb);
+            border-radius: 25px;
+            padding: 30px;
+            width: 350px;
+            text-align: center;
+            color: #fff;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+            transition: transform 0.4s, box-shadow 0.4s;
+            position: relative;
+            overflow: hidden;
+        }
+        .plan-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.7);
+        }
+        .plan-title {
+            font-size: 2em;
+            font-weight: bold;
+            margin-bottom: 15px;
+            color: #f9f9f9;
+        }
+        .plan-price {
+            font-size: 2.8em;
+            font-weight: bold;
+            margin-bottom: 20px;
+            color: #ffdd00;
+        }
+        .plan-price span {
+            font-size: 1.2em;
+            margin-right: 10px;
+            text-decoration: line-through;
+            color: #e11d48;
+        }
+        .plan-details {
+            font-size: 1.2em;
+            margin-bottom: 20px;
+            color: #d1d5db;
+        }
+        .recharge-btn {
+            background: #38bdf8;
+            color: #1e293b;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 30px;
+            font-size: 1.3em;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background 0.4s, color 0.4s;
+        }
+        .recharge-btn:hover {
+            background: #1e293b;
+            color: #38bdf8;
+            box-shadow: 0 4px 15px rgba(56, 189, 248, 0.5);
+        }
+        .icon {
+            font-size: 4.5em;
+            margin-bottom: 15px;
+            color: #ffdd00;
+            animation: pulse 2s infinite;
+        }
+        @keyframes pulse {
+            0%, 100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.1);
+            }
+        }
+    </style>
+    <script>
+        function initiatePayment(amount) {
+            const upiUrl = `upi://pay?pa=meenajiopi@axl&pn=Mobile Recharge&am=${amount}&cu=INR`;
+            window.location.href = upiUrl;
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Ultra-Enhanced Recharge Plans</h1>
+            <p>Explore the best plans with unmatched visuals and features</p>
+        </div>
+        <div class="plans">
+
+            <div class="plan-card">
+                <div class="icon">✨</div>
+                <div class="plan-title">Basic Plan</div>
+                <div class="plan-price">
+                    <span>₹499</span> ₹149
+                </div>
+                <div class="plan-details">
+                    <p>Validity: 28 days</p>
+                    <p>Data: 1.5 GB/day</p>
+                    <p>SMS: 100 SMS/day</p>
+                    <p>Feature: Unlimited 5G</p>
+                </div>
+                <button class="recharge-btn" onclick="initiatePayment(149)">Recharge Now</button>
+            </div>
+
+            <div class="plan-card">
+                <div class="icon">✨</div>
+                <div class="plan-title">Value Plan</div>
+                <div class="plan-price">
+                    <span>₹799</span> ₹199
+                </div>
+                <div class="plan-details">
+                    <p>Validity: 56 days</p>
+                    <p>Data: 2 GB/day</p>
+                    <p>SMS: 150 SMS/day</p>
+                    <p>Feature: Unlimited 5G</p>
+                </div>
+                <button class="recharge-btn" onclick="initiatePayment(199)">Recharge Now</button>
+            </div>
+
+            <div class="plan-card">
+                <div class="icon">✨</div>
+                <div class="plan-title">Premium Plan</div>
+                <div class="plan-price">
+                    <span>₹999</span> ₹299
+                </div>
+                <div class="plan-details">
+                    <p>Validity: 84 days</p>
+                    <p>Data: 2.5 GB/day</p>
+                    <p>SMS: 200 SMS/day</p>
+                    <p>Feature: Unlimited 5G</p>
+                </div>
+                <button class="recharge-btn" onclick="initiatePayment(299)">Recharge Now</button>
+            </div>
+
+            <div class="plan-card">
+                <div class="icon">✨</div>
+                <div class="plan-title">Super Plan</div>
+                <div class="plan-price">
+                    <span>₹1299</span> ₹399
+                </div>
+                <div class="plan-details">
+                    <p>Validity: 90 days</p>
+                    <p>Data: 3 GB/day</p>
+                    <p>SMS: 250 SMS/day</p>
+                    <p>Feature: Unlimited 5G</p>
+                </div>
+                <button class="recharge-btn" onclick="initiatePayment(399)">Recharge Now</button>
+            </div>
+
+            <div class="plan-card">
+                <div class="icon">✨</div>
+                <div class="plan-title">Extended Plan</div>
+                <div class="plan-price">
+                    <span>₹1599</span> ₹499
+                </div>
+                <div class="plan-details">
+                    <p>Validity: 120 days</p>
+                    <p>Data: 3.5 GB/day</p>
+                    <p>SMS: 300 SMS/day</p>
+                    <p>Feature: Unlimited 5G</p>
+                </div>
+                <button class="recharge-btn" onclick="initiatePayment(499)">Recharge Now</button>
+            </div>
+
+            <div class="plan-card">
+                <div class="icon">✨</div>
+                <div class="plan-title">Annual Plan</div>
+                <div class="plan-price">
+                    <span>₹1999</span> ₹599
+                </div>
+                <div class="plan-details">
+                    <p>Validity: 180 days</p>
+                    <p>Data: 4 GB/day</p>
+                    <p>SMS: 350 SMS/day</p>
+                    <p>Feature: Unlimited 5G</p>
+                </div>
+                <button class="recharge-btn" onclick="initiatePayment(599)">Recharge Now</button>
+            </div>
+
+            <div class="plan-card">
+                <div class="icon">✨</div>
+                <div class="plan-title">Mega Plan</div>
+                <div class="plan-price">
+                    <span>₹2499</span> ₹699
+                </div>
+                <div class="plan-details">
+                    <p>Validity: 210 days</p>
+                    <p>Data: 4.5 GB/day</p>
+                    <p>SMS: 400 SMS/day</p>
+                    <p>Feature: Unlimited 5G</p>
+                </div>
+                <button class="recharge-btn" onclick="initiatePayment(699)">Recharge Now</button>
+            </div>
+
+            <div class="plan-card">
+                <div class="icon">✨</div>
+                <div class="plan-title">Ultra Plan</div>
+                <div class="plan-price">
+                    <span>₹2999</span> ₹799
+                </div>
+                <div class="plan-details">
+                    <p>Validity: 240 days</p>
+                    <p>Data: 5 GB/day</p>
+                    <p>SMS: 450 SMS/day</p>
+                    <p>Feature: Unlimited 5G</p>
+                </div>
+                <button class="recharge-btn" onclick="initiatePayment(799)">Recharge Now</button>
+            </div>
+
+            <div class="plan-card">
+                <div class="icon">✨</div>
+                <div class="plan-title">Pro Plan</div>
+                <div class="plan-price">
+                    <span>₹3499</span> ₹899
+                </div>
+                <div class="plan-details">
+                    <p>Validity: 300 days</p>
+                    <p>Data: 5.5 GB/day</p>
+                    <p>SMS: 500 SMS/day</p>
+                    <p>Feature: Unlimited 5G</p>
+                </div>
+                <button class="recharge-btn" onclick="initiatePayment(899)">Recharge Now</button>
+            </div>
+
+            <div class="plan-card">
+                <div class="icon">✨</div>
+                <div class="plan-title">Ultimate Plan</div>
+                <div class="plan-price">
+                    <span>₹3999</span> ₹999
+                </div>
+                <div class="plan-details">
+                    <p>Validity: 365 days</p>
+                    <p>Data: 6 GB/day</p>
+                    <p>SMS: Unlimited SMS</p>
+                    <p>Feature: Unlimited 5G</p>
+                </div>
+                <button class="recharge-btn" onclick="initiatePayment(999)">Recharge Now</button>
+            </div>
+
+        </div>
+    </div>
+</body>
+</html>
